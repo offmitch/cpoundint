@@ -8,7 +8,10 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+
+<div class="share-price">
     <h1>Current Share Price: $<span id="price">Loading...</span> per share</h1>
+</div>
 
     <div class="container">
       <div>
@@ -18,7 +21,8 @@
           <input type="number" id="months" name="months" step="1" required />
           <button type="submit">Simulate Months</button>
         </form>
-
+        </div>
+        <div>
         <h1>Buy Shares</h1>
         <form id="buy-form">
           <label for="buy-amount">Amount $</label>
@@ -95,6 +99,8 @@
           />
           <button type="submit">Calculate</button>
         </form>
+        </div>
+        <div>
         <p>
           Amount of money you have invested $<span id="invested-amount-year"
             >0.00</span

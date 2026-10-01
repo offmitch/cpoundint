@@ -42,10 +42,15 @@ span {
   font-weight: bold;
 }
 
+.share-price {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .container {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 10px;
+  gap: 45px;
   padding: 20px;
   align-content: center;
 }
