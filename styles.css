@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  --ink: #f8faf8;
+  --dark: #306230;
+  --mid: #047b8b;
+  --light: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  overflow-y: hidden;
+}
+
+body {
+  background: var(--light);
+  color: var(--ink);
+  font-family: "Press Start 2P", ui-monospace, monospace;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 40px 0 12px;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 12px;
+  margin: 32px 0 12px;
+  line-height: 1.4;
+}
+
+p {
+  margin: 8px 0;
+}
+
+span {
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  padding: 20px;
+  align-content: center;
+}
+
+div {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* forms: each one is a chunky pixel panel */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 4px;
+  padding: 16px;
+  /* background: var(--mid);
+    box-shadow:
+        0 -4px 0 0 var(--ink),
+        0 4px 0 0 var(--ink),
+        -4px 0 0 0 var(--ink),
+        4px 0 0 0 var(--ink); */
+}
+
+label {
+  font-size: 10px;
+}
+
+/* inputs: sunken 1-step border */
+input {
+  width: 100%;
+  max-width: 260px;
+  margin: 4px;
+  padding: 10px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--light);
+  border: 0;
+  outline: 0;
+  box-shadow:
+    0 -4px 0 0 var(--ink),
+    0 4px 0 0 var(--ink),
+    -4px 0 0 0 var(--ink),
+    4px 0 0 0 var(--ink);
+}
+
+input:focus {
+  background: #207100;
+  box-shadow:
+    0 -4px 0 0 var(--dark),
+    0 4px 0 0 var(--dark),
+    -4px 0 0 0 var(--dark),
+    4px 0 0 0 var(--dark);
+}
+
+/* buttons: notched pixel corners, hard drop shadow, press-down state */
+button {
+  margin: 6px 10px 10px 6px;
+  padding: 12px 16px;
+  font: inherit;
+  color: var(--light);
+  background: var(--dark);
+  border: 0;
+  cursor: pointer;
+  box-shadow:
+    0 -4px 0 0 var(--ink),
+    0 4px 0 0 var(--ink),
+    -4px 0 0 0 var(--ink),
+    4px 0 0 0 var(--ink),
+    4px 8px 0 0 var(--ink),
+    8px 4px 0 0 var(--ink);
+}
+
+button:hover {
+  background: var(--ink);
+}
+
+button:active {
+  transform: translate(4px, 4px);
+  box-shadow:
+    0 -4px 0 0 var(--ink),
+    0 4px 0 0 var(--ink),
+    -4px 0 0 0 var(--ink),
+    4px 0 0 0 var(--ink);
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 4px dotted var(--ink);
+  outline-offset: 6px;
+}

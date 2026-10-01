@@ -1,62 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Web Page</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <h1>Current Share Price</h1>
-        <p>$<span id="price">Loading...</span> per share</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Current Share Price: $<span id="price">Loading...</span> per share</h1>
 
-        <h3>Simulate Price Changes</h3>
+    <div class="container">
+      <div>
+        <h1>Simulate Price Changes</h1>
         <form id="month-form">
-            <label for="months">Choose amount of months to simulate</label>
-            <input type="number" id="months" name="months" step="1" required>
-            <button type="submit">Simulate Months</button>
+          <label for="months">Choose amount of months to simulate</label>
+          <input type="number" id="months" name="months" step="1" required />
+          <button type="submit">Simulate Months</button>
         </form>
 
         <h1>Buy Shares</h1>
         <form id="buy-form">
-            <label for="buy-amount">Amount $</label>
-            <input type="number" id="buy-amount" name="buy-amount" step="0.01" required>
-            <button type="submit">Buy Shares</button>
+          <label for="buy-amount">Amount $</label>
+          <input
+            type="number"
+            id="buy-amount"
+            name="buy-amount"
+            step="0.01"
+            required
+          />
+          <button type="submit">Buy Shares</button>
         </form>
-
-        <h3>Simulate Monthly Payments</h3>
+      </div>
+      <div>
+        <h1>Simulate Monthly Payments</h1>
         <form id="monthly-payment-form">
-            <label for="months-schedule">Choose amount of months to simulate</label>
-            <input type="number" id="months-schedule" name="months-schedule" step="1" required>
-            <label for="monthly-payment">Monthly Payment $</label>
-            <input type="number" id="monthly-payment" name="monthly-payment" step="0.01" required>
-            <button type="submit">Simulate Months</button>
+          <label for="months-schedule"
+            >Choose amount of months to simulate</label
+          >
+          <input
+            type="number"
+            id="months-schedule"
+            name="months-schedule"
+            step="1"
+            required
+          />
+          <label for="monthly-payment">Monthly Payment $</label>
+          <input
+            type="number"
+            id="monthly-payment"
+            name="monthly-payment"
+            step="0.01"
+            required
+          />
+          <button type="submit">Simulate Months</button>
         </form>
-
-
+      </div>
+      <div>
         <h1>Amount of Shares you own</h1>
         <p><span id="shares-owned">Loading...</span> shares</p>
 
         <h1>Investments Balance</h1>
-        <p>Amount of money you have invested $<span id="invested-amount">Loading...</span></p>
-        <p>Your shares are worth $<span id="investment-balance">Loading...</span></p>
+        <p>
+          Amount of money you have invested $<span id="invested-amount"
+            >Loading...</span
+          >
+        </p>
+        <p>
+          Your shares are worth $<span id="investment-balance">Loading...</span>
+        </p>
 
         <p>Time Passed: <span id="years-passed">0</span> years</p>
-        
-        <h1>Year and set return rate </h1>
+      </div>
+      <div>
+        <h1>Year and set return rate</h1>
         <form id="year-form">
-            <label for="year">Years</label>
-            <input type="number" id="year" name="year" step="1" required>
-            <label for="amount-monthly">Amount Monthly $</label>
-            <input type="number" id="amount-monthly" name="amount-monthly" step="0.01" required>
-            <label for="return-rate">Return Rate %</label>
-            <input type="number" id="return-rate" name="return-rate" step="0.01" required>
-            <button type="submit">Calculate</button>
+          <label for="year">Years</label>
+          <input type="number" id="year" name="year" step="1" required />
+          <label for="amount-monthly">Amount Monthly $</label>
+          <input
+            type="number"
+            id="amount-monthly"
+            name="amount-monthly"
+            step="0.01"
+            required
+          />
+          <label for="return-rate">Return Rate %</label>
+          <input
+            type="number"
+            id="return-rate"
+            name="return-rate"
+            step="0.01"
+            required
+          />
+          <button type="submit">Calculate</button>
         </form>
-        <p>Amount of money you have invested $<span id="invested-amount-year">0.00</span></p>
+        <p>
+          Amount of money you have invested $<span id="invested-amount-year"
+            >0.00</span
+          >
+        </p>
         <p>Balance: $<span id="balance">0.00</span></p>
-        <p>Profit: $<span id="profit">0.00</span> over <span id="years">0</span> years</p>
-        
-    </body>
+        <p>
+          Profit: $<span id="profit">0.00</span> over
+          <span id="years">0</span> years
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
