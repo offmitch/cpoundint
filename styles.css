@@ -10,7 +10,6 @@
 * {
   box-sizing: border-box;
   image-rendering: pixelated;
-  overflow-y: hidden;
 }
 
 body {
@@ -53,6 +52,15 @@ span {
   gap: 45px;
   padding: 20px;
   align-content: center;
+}
+
+.container-2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 45px;
+  padding: 20px;
+  align-content: center;
+  border-top: 4px dotted var(--ink);
 }
 
 div {
@@ -143,4 +151,14 @@ button:focus-visible,
 input:focus-visible {
   outline: 4px dotted var(--ink);
   outline-offset: 6px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: auto;
+  }
+
+  .container-2 {
+    grid-template-columns: auto;
+  }
 }
